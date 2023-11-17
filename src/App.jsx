@@ -1,11 +1,13 @@
-import Fondo from "./assets/components/fondo"
+import Fondo from "./components/Fondo"
 
 
 function App() {
 
   return (
     <>
+    <div className="bg-danger">
       <Fondo />
+    </div>
     </>
   )
 }

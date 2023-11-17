@@ -3,7 +3,7 @@ import React from 'react'
 const Navbar = () => {
   return (
 
-    <div className="header bg-danger">
+    <div className="header">
     
         <nav className="navbar navbar-expand-lg navbar-dark shadow-5-strong text-dark">
             <div className="container-fluid">
@@ -24,6 +24,9 @@ const Navbar = () => {
                     </li>
                     <li className="nav-item">
                         <a className="nav-link text-white" aria-disabled="true">Disabled</a>
+                    </li>
+                    <li className="nav-item">
+                        <button className='btn btn-light m-3 text-dark'>▷ Reproducir</button>
                     </li>
                 </ul>
                 </div>
