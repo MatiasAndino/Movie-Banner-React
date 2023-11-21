@@ -7,7 +7,7 @@ const BtnReproducir = ({ titulo }) => {
     }
 
   return (
-    <button onClick={ handleClick } className='btn btn-light text-dark m-1 fw-semibold'>▷Reproducir</button>
+    <button onClick={ handleClick } className='btn btn-light text-dark m-1 fw-semibold'>▷ Reproducir</button>
   )
 }
 
