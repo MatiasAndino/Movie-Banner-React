@@ -23,7 +23,7 @@
 
 /* CARD */
 #card{
-  width: 50rem;
+  max-width: 50rem;
   background-color: transparent !important;
 }
 

@@ -6,12 +6,15 @@ import Carrusel from '../carrusel/Carrusel';
 
 const Banner = () => {
     const style = {
-        'background': 'url("https://s3.amazonaws.com/dam.smashmexico.com.mx/wp-content/uploads/2023/11/la-ultima-puerta-final-explicado-pelicula-johnny-depp-netflix.jpg") no-repeat center',
+        background: "url('https://www.displayninja.com/wp-content/uploads/2019/06/720p-vs-1080p-vs-1440p-vs-4K-vs-8K.jpg')",
+        // backgroundImage: 'url("https://s3.amazonaws.com/dam.smashmexico.com.mx/wp-content/uploads/2023/11/la-ultima-puerta-final-explicado-pelicula-johnny-depp-netflix.jpg") no-repeat center',
         // 'background': 'url("https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8MTkyMHgxMDgwfGVufDB8fDB8fHww") no-repeat center',
         // 'background': 'url("./assets/imagenes/16x9.jpg") no-repeat center',
         // 'height': 'auto',
-        'backgroundSize': 'cover',
-        'minWidth': '100%',
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat',
+        width: '100%',
+        height: 'auto'
     };
 
     return (
