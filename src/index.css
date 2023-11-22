@@ -29,27 +29,11 @@
 
 /* CARRUSEL */
 .carousel-control-prev, .carousel-control-next{
-  background-color: #515151;
-  width: 5vh;
-  height: 20vh;
+  background-color: #555555;
+  width: 4%;
+  height: 100%;
   border-radius: 5px;
   top: 50%;
   transform: translateY(-50%);
-}
-
-#carouselExample {
-  background-color: transparent !important;
-  display: flex;         /* Utiliza Flexbox para mostrar los elementos en una fila */
-  overflow: auto;        /* Agrega desplazamiento horizontal si los elementos no caben en la pantalla */
-}
-
-.carousel-item {
-  flex: 0 0 auto;         /* Hace que los elementos no se expandan y mantengan su tamaño original */
-  max-width: 75%;        /* Limita el tamaño máximo de cada elemento al 100% del contenedor padre */
-}
-
-.img-flush {
-  width: 11%;            /* Hace que las imágenes ocupen todo el ancho del contenedor */
-  height: auto;           /* Mantiene la proporción original de la imagen */
-  /* max-height: 450px;  */
+  
 }

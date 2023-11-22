@@ -1,5 +1,5 @@
 import React from 'react'
-import Banner from '../banner/Banner'
+import Banner2 from '../banner/Banner2'
 
 const Modal = () => {
     return (
@@ -21,7 +21,7 @@ const Modal = () => {
                 <div class="modal fade modal-xl modal-dialog-centered modal-dialog-scrollable" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel">
                     <div className="modal-dialog">
                         <div className="modal-content">
-                            <Banner parent='Banner'/>
+                            <Banner2 parent='Banner'/>
                         </div>
                     </div>
                 </div>
