@@ -21,7 +21,7 @@ const Modal = () => {
                 <div class="modal fade modal-xl modal-dialog-centered modal-dialog-scrollable" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel">
                     <div className="modal-dialog">
                         <div className="modal-content">
-                            <Banner />
+                            <Banner parent='Banner'/>
                         </div>
                     </div>
                 </div>

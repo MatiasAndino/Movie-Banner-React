@@ -30,7 +30,7 @@ const MainView = () => {
       </div> */}
 
 <Navbar />
-<Banner />
+<Banner parent='MainView' />
 <Modal />
 
       {/* <div className='header'>
