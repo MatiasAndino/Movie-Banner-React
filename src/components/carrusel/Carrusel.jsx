@@ -36,7 +36,7 @@ const Carrusel = () => {
 
                 </div>
             </div>
-            <div style={{width:'100%'}}>
+            <div className='' style={{width:'100%'}}>
 
                 <div className="container-fluid">
                     <div id="carouselExample" className="carousel slide" >

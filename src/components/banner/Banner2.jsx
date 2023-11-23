@@ -13,7 +13,7 @@ const Banner2 = ({ parent = 'MainView' }) => {
 
     return (
         <div>
-            <img src='src/assets/imagenes/16x9-solid.jpg' className="img-fluid" alt="..."/>
+            <img src='src/assets/imagenes/16x9-solid.jpg' className="img-fluid" alt="..." style={{width:'100%', height:'auto'}} />
             <div className="row" style={{ alignSelf: 'flex-start', transform: 'translateY(-134%)' }}>
                 {
                     parent === 'MainView'
@@ -31,6 +31,7 @@ const Banner2 = ({ parent = 'MainView' }) => {
                         )
                         :
                         <>
+                            MODAL
                         </>
                 }
             </div>
