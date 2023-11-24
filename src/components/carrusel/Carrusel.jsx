@@ -7,7 +7,7 @@ const Carrusel = () => {
     const imagenes = ['01.jpg', '02.jpg', '03.jpg', '04.jpg', '05.jpg', '06.jpg', '07.jpg', '08.jpg', '09.jpg',
         '10.jpg', '11.jpg', '12.jpg', '13.jpg', '14.jpg', '15.jpg', '16.jpg', '17.jpg', '18.jpg', '19.jpg', '20.jpg',]
 
-    const minItems = 6;
+    const minItems = 5;
     const total = imagenes.length;
     const iteraciones = Math.ceil(total / minItems);
 
@@ -21,9 +21,14 @@ const Carrusel = () => {
     }
 
 
-    /*<div style={{width:'90vw', marginLeft:'1.5vw'}}>
-        esta linea posiciona el carrusel en el centro de la ventana, y lo hace en base a la dimension de la ventana
-    */ 
+    /*
+        6 elementos 16.08% margen .5%
+        5 elementos 19.2%  margen .65%
+        4 elementos 24%  margen .8%
+        3 elementos 32%   margen 1%
+        marginLeft .55%
+    */
+
 
     return (
         <div className='mb-2'>
@@ -36,7 +41,7 @@ const Carrusel = () => {
 
                 </div>
             </div>
-            <div className=''  >
+            <div className=''>
 
                 <div className="container-fluid">
                     <div id="carouselExample" className="carousel slide" style={{ zIndex: 1 }}>
@@ -47,7 +52,8 @@ const Carrusel = () => {
                                         <div className={`carousel-item ${index === 0 && 'active'}`} key={Math.random() * 100000} >
                                             {
                                                 element.map(imagen => (
-                                                    <img className='img-flush rounded' src={PATH + imagen} alt={imagen} key={imagen} style={{ width: '16%', height: 'auto', marginLeft:'.55%' }} />
+                                                    <img className='img-fluid rounded' src={PATH + imagen} alt={imagen} key={imagen} style={{ width: '19.2%', height: 'auto', marginLeft:'.65%' }} />
+                                                    // <img className='img-thumbnail rounded' src={PATH + imagen} alt={imagen} key={imagen} style={{ width: '16%', height: 'auto', marginLeft:'.55%' }} />
                                                 ))
                                             }
                                         </div>
