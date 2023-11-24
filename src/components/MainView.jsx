@@ -13,7 +13,6 @@ const MainView = () => {
   return (
     <div className='bg-dark'>
 
-
         <Navbar />
         {/* <Banner2 parent='MainView' /> */}
         <Banner parent='MainView' />
