@@ -1,4 +1,5 @@
 import React from 'react';
+import useScreenWidth from '../screen/useScreenWidth';
 
 const Carrusel = () => {
 
@@ -7,7 +8,46 @@ const Carrusel = () => {
     const imagenes = ['01.jpg', '02.jpg', '03.jpg', '04.jpg', '05.jpg', '06.jpg', '07.jpg', '08.jpg', '09.jpg',
         '10.jpg', '11.jpg', '12.jpg', '13.jpg', '14.jpg', '15.jpg', '16.jpg', '17.jpg', '18.jpg', '19.jpg', '20.jpg',]
 
-    const minItems = 5;
+
+
+    const screenWidth = useScreenWidth();
+
+    const windowOptions = {
+        0 : {
+            items : 3,
+            style: {
+                width: '32%', 
+                height: 'auto', 
+                marginLeft: '1%',
+            }
+        },
+        1 : {
+            items : 4,
+            style: {
+                width: '24%', 
+                height: 'auto', 
+                marginLeft: '.8%',
+            }
+        },
+        2 : {
+            items : 5,
+            style: {
+                width: '19.2%', 
+                height: 'auto', 
+                marginLeft: '.65%',
+            }
+        },
+        3 : {
+            items : 6,
+            style: {
+                width: '16.08%', 
+                height: 'auto', 
+                marginLeft: '.5%',
+            }
+        },
+    }
+
+    const minItems = windowOptions[screenWidth].items;
     const total = imagenes.length;
     const iteraciones = Math.ceil(total / minItems);
 
@@ -26,9 +66,9 @@ const Carrusel = () => {
         5 elementos 19.2%  margen .65%
         4 elementos 24%  margen .8%
         3 elementos 32%   margen 1%
-        marginLeft .55%
     */
 
+    console.log('RESULTADO',screenWidth);
 
     return (
         <div className='mb-2'>
@@ -52,7 +92,8 @@ const Carrusel = () => {
                                         <div className={`carousel-item ${index === 0 && 'active'}`} key={Math.random() * 100000} >
                                             {
                                                 element.map(imagen => (
-                                                    <img className='img-fluid rounded' src={PATH + imagen} alt={imagen} key={imagen} style={{ width: '19.2%', height: 'auto', marginLeft:'.65%' }} />
+                                                    <img className='img-fluid rounded' src={PATH + imagen} alt={imagen} key={imagen} style={ windowOptions[screenWidth].style } />
+                                                    // <img className='img-fluid rounded' src={PATH + imagen} alt={imagen} key={imagen} style={{ width: '16.08%', height: 'auto', marginLeft: '.5%' }} />
                                                     // <img className='img-thumbnail rounded' src={PATH + imagen} alt={imagen} key={imagen} style={{ width: '16%', height: 'auto', marginLeft:'.55%' }} />
                                                 ))
                                             }
