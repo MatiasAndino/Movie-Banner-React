@@ -10,7 +10,7 @@ const Card = ({ titulo, introduccion }) => {
     fontSize: '4vw',
   }
   return (
-      <div className="card m-5 border border-1 pt-5" id='card'>
+      <div className="card m-5 border border-1 pt-5 bg-transparent w-50" id='card'>
         <div className="card-body">
           <h1 className="card-title text-center fw-bold text-light" style={ fontSizeT }>{ titulo }</h1>
           <p className="card-text fw-semibold mt-4 text-light" style={ fontSizeP }>{ introduccion }</p>

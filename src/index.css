@@ -19,20 +19,21 @@
 
 .header .navbar {
   background-color: transparent !important;
+  z-index: 2;
 }
 
 /* CARD */
-#card{
+/* #card{
   max-width: 50vw;
   background-color: transparent !important;
-}
+} */
 
 /* CARRUSEL */
 .carousel-control-prev, .carousel-control-next{
   background-color: #555555;
   width: 4%;
   height: 100%;
-  border-radius: 5px;
+  border-radius: 1px;
   top: 50%;
   transform: translateY(-50%);
   

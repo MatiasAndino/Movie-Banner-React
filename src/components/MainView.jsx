@@ -9,25 +9,23 @@ import Modal from './modal/Modal'
 
 
 const MainView = () => {
+
   return (
-    <div className='bg-danger container-fluid'>
-      <Navbar />
-      {/* <Banner2 parent='MainView' /> */}
-      <Banner parent='MainView' />
+    <div className='bg-dark'>
+
+
+        <Navbar />
+        {/* <Banner2 parent='MainView' /> */}
+        <Banner parent='MainView' />
+
+
       <Carrusel />
       <Carrusel />
-{/* 
-      <Modal />
-      <Modal />
-      <Modal />
-      <Modal />
-      <Modal />
-      <Modal /> */}
-
-
-
+      <Carrusel />
 
     </div>
+
+
   )
 }
 

@@ -27,20 +27,20 @@ const Carrusel = () => {
 
     return (
         <div className='mb-2'>
-            <div className="row mb-1">
-                <div className="col-12">
-                    <h2 className='text-light m-2'>NUESTRA SELECCION PARA TU MAMÁ</h2>
+            <div className="row mb-1" >
+                <div className="col-12" style={{ zIndex: 1 }}>
+                    <h2 className='text-light m-2 fs-4' >NUESTRA SELECCION PARA TU MAMÁ</h2>
 
                 </div>
                 <div className="col-12">
 
                 </div>
             </div>
-            <div className='' style={{width:'100%'}}>
+            <div className=''  >
 
                 <div className="container-fluid">
-                    <div id="carouselExample" className="carousel slide" >
-                        <div className="carousel-inner">
+                    <div id="carouselExample" className="carousel slide" style={{ zIndex: 1 }}>
+                        <div className="carousel-inner"  >
                             {
                                 elements.map((element, index) => {
                                     return (

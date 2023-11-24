@@ -13,11 +13,16 @@ import Contenido from './Contenido';
 */
 const Banner = ({ parent = 'MainView' }) => {
     const src = 'src/assets/imagenes/16x9-solid.jpg';
-    const style = { alignSelf: 'flex-start', transform: 'translateY(-0%)' };
     return (
-        <div>
-            <BackgroundImage />
-            <Contenido parent="MainView" />
+        <div className=''>
+
+            <div className=''>
+                <BackgroundImage />
+            </div>
+
+            <div className="">
+                <Contenido parent="MainView" />
+            </div>
         </div>
     )
 }
