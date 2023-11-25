@@ -23,7 +23,7 @@ const Navbar = () => {
                                 <a className="nav-link text-white" href="#">Pricing</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link text-white" aria-disabled="true">Disabled</a>
+                                <a className="nav-link text-white" aria-disabled="true">{ Math.floor(Math.random() * 100) }</a>
                             </li>
                         </ul>
                     </div>
