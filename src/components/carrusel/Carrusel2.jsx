@@ -80,6 +80,7 @@ const Carrusel2 = () => {
         const updatedCarouselContent = elements.map((element, index) => {
             return (
                 <div className={`carousel-item ${index === 0 && 'active'}`} key={Math.random() * 100000} >
+                    <h2 className='text-danger m-2 fs-4' >CAROUSEL DE LOCAS!!++++++++++++++++++++++</h2>
                     <div className='cards-wrapper' >
                         {/* <div className=' cards-wrapper bg-primary' style={{ height: '253px' }}  > */}
                         {
@@ -115,11 +116,11 @@ const Carrusel2 = () => {
 
         <div className='container-fluid' >
             <div className=''>
-                <h2 className='text-danger m-2 fs-4' >CAROUSEL DE LOCAS!!++++++++++++++++++++++</h2>
+                {/* <h2 className='text-danger m-2 fs-4' >CAROUSEL DE LOCAS!!++++++++++++++++++++++</h2> */}
             </div>
 
             <div id="carouselExample" className="carousel slide d-flex justify-content-center">
-                <div className="carousel-inner row align-items-center" style={{ height: '30vw', width:'95%'}} >
+                <div className="carousel-inner row align-items-center" style={{ width:'95%', overflow: 'visible', height:'15vw' }} >
                     {
                         carouselContent.content
                     }
