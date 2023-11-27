@@ -2,6 +2,7 @@ import React from 'react'
 import Navbar from './Navbar'
 import Card from './card/Card'
 import Carrusel from './carrusel/Carrusel'
+import Carrusel2 from './carrusel/Carrusel2'
 import Banner2 from './banner/Banner2'
 import Banner from './banner/Banner'
 import Modal from './modal/Modal'
@@ -18,9 +19,10 @@ const MainView = () => {
         <Banner parent='MainView' />
 
 
-      <Carrusel />
-      <Carrusel />
-      <Carrusel />
+      <Carrusel2 />
+      <Carrusel2 />
+      <Carrusel2 />
+      PERRO CAMIONETA
 
     </div>
 

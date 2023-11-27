@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 
-const WIDTHS = [0, 768, 1024, 1440];
+const WIDTHS = [0, 1024, 1440, 1920];
 
 const useScreenWidth = () => {
     const [screenWidth, setScreenWidth] = useState(window.innerWidth);

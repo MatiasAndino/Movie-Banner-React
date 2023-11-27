@@ -5,6 +5,7 @@ import useIndiceCarrusel from './indice/useIndiceCarrusel';
 const Carrusel = () => {
 
 
+    const BASE_MARGIN_TOP = 2;
     const PATH = './src/images/'
     const archivos = ['00.jpg', '01.jpg', '02.jpg', '03.jpg', '04.jpg', '05.jpg', '06.jpg', '07.jpg', '08.jpg', '09.jpg',
         '10.jpg', '11.jpg', '12.jpg', '13.jpg', '14.jpg', '15.jpg', '16.jpg', '17.jpg', '18.jpg', '19.jpg']
@@ -12,6 +13,7 @@ const Carrusel = () => {
     const screenWidth = useScreenWidth();
     const { activeIndex, next, prev, reset } = useIndiceCarrusel();
     const [imagenes, setImagenes] = useState(archivos);
+    const marginTop = BASE_MARGIN_TOP + screenWidth;
 
     const windowOptions = {
         0: {
@@ -92,7 +94,7 @@ const Carrusel = () => {
 
 
     return (
-        <div className='mb-2 mt-5'>
+        <div className={ `mb-2 mt-${marginTop}` }>
             <div className="row mb-1" >
                 <div className="col-12" style={{ zIndex: 1 }}>
                     <h2 className='text-light m-2 fs-4' >FAVORITOS</h2>
