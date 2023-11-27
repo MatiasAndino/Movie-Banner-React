@@ -32,10 +32,10 @@
  .carousel-control-prev {
   background-color: #f00;
   width: 4%;
-  height: 32%;
+  height: 90%;
   border-radius: 1px;
-  top: 50%;
-  transform: translateX(-20%) translateY(-47%);
+  top: 28%;
+  transform: translateX(-20%);
 
 }
 
@@ -97,3 +97,34 @@
   width: 100%;
   z-index: 10;
 }
+
+
+/* @media (min-width: 0px) {
+  .carrusel {
+    height: 130px;
+  }
+}
+
+@media (min-width: 321px) {
+  .carrusel {
+    height: 200px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .carrusel {
+    height: 230px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .carrusel {
+    height: 240px;
+  }
+}
+
+@media (min-width: 2560px) {
+  .carrusel {
+    height: 300px;
+  }
+} */

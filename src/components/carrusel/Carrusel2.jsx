@@ -55,7 +55,7 @@ const Carrusel2 = () => {
         },
     }
 
-    const items = windowOptions[screenWidth].items;
+    const items = windowOptions[screenWidth.items].items;
     const total = imagenes.length;
     const iteraciones = Math.ceil(total / items);
 
@@ -80,7 +80,7 @@ const Carrusel2 = () => {
         const updatedCarouselContent = elements.map((element, index) => {
             return (
                 <div className={`carousel-item ${index === 0 && 'active'}`} key={Math.random() * 100000} >
-                    <h2 className='text-danger m-2 fs-4' >CAROUSEL DE LOCAS!!++++++++++++++++++++++</h2>
+                    <p className='text-danger m-2 fs-4' >Favoritos</p>
                     <div className='cards-wrapper' >
                         {/* <div className=' cards-wrapper bg-primary' style={{ height: '253px' }}  > */}
                         {
@@ -108,19 +108,15 @@ const Carrusel2 = () => {
 
         setCarouselContent({ items, content: updatedCarouselContent });
         setImagenes(newImagenes);
-    }, [screenWidth])
+    }, [screenWidth.screenWidth])
 
 
 
     return (
 
-        <div className='container-fluid' >
-            <div className=''>
-                {/* <h2 className='text-danger m-2 fs-4' >CAROUSEL DE LOCAS!!++++++++++++++++++++++</h2> */}
-            </div>
-
+        <div className='container-fluid bg-warning border border-1 carrusel' style={{ height: `${ (screenWidth.screenWidth) / (carouselContent.items + 1) }px` }}>
             <div id="carouselExample" className="carousel slide d-flex justify-content-center">
-                <div className="carousel-inner row align-items-center" style={{ width:'95%', overflow: 'visible', height:'15vw' }} >
+                <div className="carousel-inner row align-items-center" style={{ width:'95%', overflow: 'visible', height: '100%'}} >
                     {
                         carouselContent.content
                     }

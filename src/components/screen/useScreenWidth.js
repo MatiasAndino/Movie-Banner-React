@@ -19,15 +19,17 @@ const useScreenWidth = () => {
     }, [screenWidth])
 
 
+    
+
     switch (true) {
         case (screenWidth >= WIDTHS[3]):
-            return 3
+            return {screenWidth, items: 3}
         case (screenWidth >= WIDTHS[2]):
-            return 2
+            return {screenWidth, items: 2}
         case (screenWidth >= WIDTHS[1]):
-            return 1
+            return {screenWidth, items: 1}
         default:
-            return 0
+            return {screenWidth, items: 0}
     }
 }
 
