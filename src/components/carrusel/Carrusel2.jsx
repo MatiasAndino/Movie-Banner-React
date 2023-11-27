@@ -1,10 +1,11 @@
 
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import useScreenWidth from '../screen/useScreenWidth';
 import useIndiceCarrusel from './indice/useIndiceCarrusel';
 
 const Carrusel2 = () => {
+    const altoImagen = useRef();
     const PATH = './src/images/'
     const archivos = [
         { path: '00.jpg', visible: false }, { path: '01.jpg', visible: false }, { path: '02.jpg', visible: false },
@@ -61,14 +62,13 @@ const Carrusel2 = () => {
 
     const [carouselContent, setCarouselContent] = useState({ items, content: [] });
 
-
-
+    
     useEffect(() => {
 
         reset();
-
+        
         const posicion = carouselContent.items * activeIndex;
-
+        
         const newImagenes = [...imagenes.slice(posicion), ...imagenes.slice(0, posicion)];
 
         const elements = [];
@@ -76,32 +76,47 @@ const Carrusel2 = () => {
         for (let index = 0; index < iteraciones; index++) {
             elements.push(newImagenes.slice(index * items, (index + 1) * items));
         }
+        
+        const obtenerAltoImagen = (evento) => {
+            const altoImagen = evento.target.clientHeight;
+            console.log(altoImagen)
+            return altoImagen;
+        };
 
         const updatedCarouselContent = elements.map((element, index) => {
             return (
                 <div className={`carousel-item ${index === 0 && 'active'}`} key={Math.random() * 100000} >
-                    <p className='text-danger m-2 fs-4' >Favoritos</p>
+                    {/* <p className='text-danger m-2 fs-4' >Favoritos</p> */}
                     <div className='cards-wrapper' >
                         {/* <div className=' cards-wrapper bg-primary' style={{ height: '253px' }}  > */}
                         {
                             element.map((imagen, imagenIndex) => (
                                 <div
                                     className={`card border border-0 bg-dark ${imagenIndex === 0 && 'primero'} ${imagenIndex === carouselContent.items && 'ultimo'}`}
+
                                 >
                                     <img
                                         src={PATH + imagen.path}
-                                        className="card-img-top border border-1 border-dark"
+                                        className="card-img-top"
                                         alt="..."
-                                        style={{ borderRadius: '5px 5px 5px 5px' }}
+                                        onLoad={ index === 0 ? obtenerAltoImagen : true}
                                     />
                                     <div className={`card-body bg-dark text-light`}>
-                                        {/* <h5 className="card-text">Card title</h5> */}
+
                                         <h5 className="card-title">Card title</h5>
                                     </div>
                                 </div>
                             ))
                         }
                     </div>
+                    <button className="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev" onClick={() => prev(iteraciones)} style={{ height: `${obtenerAltoImagen}%`}}>
+                        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span className="visually-hidden">Previous</span>
+                    </button>
+                    <button className="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next" onClick={() => next(iteraciones)}>
+                        <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span className="visually-hidden">Next</span>
+                    </button>
                 </div>
             )
         })
@@ -111,24 +126,17 @@ const Carrusel2 = () => {
     }, [screenWidth.screenWidth])
 
 
-
+    // console.log(screenWidth.screenWidth * .1)
     return (
 
-        <div className='container-fluid bg-warning border border-1 carrusel' style={{ height: `${ (screenWidth.screenWidth) / (carouselContent.items + 1) }px` }}>
-            <div id="carouselExample" className="carousel slide d-flex justify-content-center">
-                <div className="carousel-inner row align-items-center" style={{ width:'95%', overflow: 'visible', height: '100%'}} >
+        <div className='container-fluid border border-5 border-primary bg-info row align-items-start ' style={{ height: `${screenWidth.screenWidth * .117}px` }}>
+            <div id="carouselExample" className="carousel slide d-flex justify-content-center bg-warning" style={{}}>
+                <div className="carousel-inner bg-danger" style={{ width: '95%', overflow: 'visible' }} >
+                    {/* <div className="carousel-inner row align-items-center bg-primary" style={{ width:'95%', overflow: 'visible', height: '15vh'}} > ESTE ESTABA ANTES */}
                     {
                         carouselContent.content
                     }
                 </div>
-                <button className="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev" onClick={() => prev(iteraciones)}>
-                    <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span className="visually-hidden">Previous</span>
-                </button>
-                <button className="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next" onClick={() => next(iteraciones)}>
-                    <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span className="visually-hidden">Next</span>
-                </button>
             </div>
         </div>
     )

@@ -12,17 +12,17 @@ import Modal from './modal/Modal'
 const MainView = () => {
 
   return (
-    <div className='bg-dark'>
+    <div className='bg-secondary'>
 
         <Navbar />
         {/* <Banner2 parent='MainView' /> */}
         <Banner parent='MainView' />
 
 
+      {/* <Carrusel2 />
       <Carrusel2 />
-      <Carrusel2 />
-      <Carrusel2 />
-      PERRO CAMIONETA
+      <Carrusel2 /> */}
+      <div style={{height:'500px'}}></div>
 
     </div>
 
