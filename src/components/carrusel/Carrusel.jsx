@@ -15,11 +15,12 @@ const Carrusel = () => {
     const windowOptions = {
         0: {
             items: 3,
-            style: {height : '18.016vw'}
+            style: {height : '18.116vw'}
+            // style: {height : '18.016vw'}
         },
         1: {
             items: 4,
-            style: {height : '13.666vw'}
+            style: {height : '14vw'}
         },
         2: {
             items: 5,
@@ -27,7 +28,8 @@ const Carrusel = () => {
         },
         3: {
             items: 6,
-            style: {height : '9.766vw'}
+            style: {height : '9.7vw'}
+            // style: {height : '9.766vw'}
         },
     }
 
@@ -57,13 +59,13 @@ const Carrusel = () => {
                 <div className={`carousel-item ${index === 0 && 'active'}`} key={Math.random() * 100000}>
 
                     {/* <div className='cards-wrapper bg-danger align-items-center' style={{ overflow: 'visible', height: ` ${9.766 + resto}vw ` }} > */}
-                    <div className='cards-wrapper bg-danger align-items-center' style={{ overflow: 'visible', ...windowOptions[screenWidth.items].style }} >
+                    <div className='cards-wrapper align-items-center' style={{ overflow: 'visible', ...windowOptions[screenWidth.items].style }} >
                     {/* <div className='cards-wrapper bg-danger align-items-center' style={{ overflow: 'visible', height: '12vw' }} > */}
 
                         {
                             element.map(imagen => (
 
-                                <div class="card bg-transparent border border-0" >
+                                <div class="card  border border-0" >
                                     <img
                                         className='card-img-top'
                                         src={PATH + imagen}
@@ -73,7 +75,7 @@ const Carrusel = () => {
                                         // style={windowOptions[screenWidth.items].style}
                                     />
                                     <div class="card-body bg-dark text-light">
-                                        <p class="card-text">Some quick examp</p>
+                                        <p class="card-text">❤❤❤❤❤</p>
                                     </div>
                                 </div>
                             ))

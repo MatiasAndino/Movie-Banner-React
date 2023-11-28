@@ -12,7 +12,7 @@ import Modal from './modal/Modal'
 const MainView = () => {
 
   return (
-    <div className='bg-secondary'>
+    <div className='bg-dark'>
 
         <Navbar />
         {/* <Banner2 parent='MainView' /> */}
