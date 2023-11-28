@@ -8,17 +8,9 @@ const Carrusel = () => {
     const archivos = ['00.jpg', '01.jpg', '02.jpg', '03.jpg', '04.jpg', '05.jpg', '06.jpg', '07.jpg', '08.jpg', '09.jpg',
         '10.jpg', '11.jpg', '12.jpg', '13.jpg', '14.jpg', '15.jpg', '16.jpg', '17.jpg', '18.jpg', '19.jpg']
 
-    const { screenWidth, items } = useScreenWidth();
+    const { screenWidth, items, style } = useScreenWidth();
     const { activeIndex, next, prev, reset } = useIndiceCarrusel();
     const [imagenes, setImagenes] = useState(archivos);
-
-    const windowOptions = {
-        3: { style: { height: '18.116vw' } },
-        4: { style: { height: '14vw' } },
-        5: { style: { height: '11.4vw' } },
-        6: { style: { height: '9.7vw' } }
-    }
-
 
     const total = imagenes.length;
     const iteraciones = Math.ceil(total / items);
@@ -27,7 +19,6 @@ const Carrusel = () => {
 
 
     useEffect(() => {
-
         reset();
 
         const posicion = carouselContent.items * activeIndex;
@@ -44,12 +35,12 @@ const Carrusel = () => {
             return (
                 <div className={`carousel-item ${index === 0 && 'active'}`} key={Math.random() * 100000}>
 
-                    <div className='cards-wrapper align-items-center' style={{ overflow: 'visible', ...windowOptions[items].style }} >
+                    <div className='cards-wrapper align-items-center' key={Math.random() * 100000} style={{ overflow: 'visible', ...style }}  >
 
                         {
                             element.map(imagen => (
 
-                                <div class="card  border border-0" >
+                                <div className="card border border-0" key={Math.random() * 100000} >
                                     <img
                                         className='card-img-top'
                                         src={PATH + imagen}
@@ -57,8 +48,8 @@ const Carrusel = () => {
                                         key={imagen}
                                         style={{ zIndex: '2' }}
                                     />
-                                    <div class="card-body bg-dark text-light">
-                                        <p class="card-text">❤❤❤❤❤</p>
+                                    <div className="card-body bg-dark text-light">
+                                        <p className="card-text">❤❤❤❤❤</p>
                                     </div>
                                 </div>
                             ))
@@ -77,7 +68,7 @@ const Carrusel = () => {
         <div className="container-fluid">
             <div style={{ height: '20px' }}></div>
             <h2 className='text-light m-2 fs-4 align-text-top'>FAVORITOS</h2>
-            <div id="carouselExample" className="carousel slide d-flex justify-content-center" style={{}}>
+            <div id="carouselExample" className="carousel slide d-flex justify-content-center">
                 <div className="carousel-inner" style={{ width: '95%', overflow: 'visible' }} >
                     {
                         carouselContent.content
