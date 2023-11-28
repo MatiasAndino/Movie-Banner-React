@@ -18,6 +18,10 @@ const MainView = () => {
         {/* <Banner2 parent='MainView' /> */}
         <Banner parent='MainView' />
 
+        <Carrusel />
+        <Carrusel />
+        <Carrusel />
+        <Carrusel />
 
       {/* <Carrusel2 />
       <Carrusel2 />

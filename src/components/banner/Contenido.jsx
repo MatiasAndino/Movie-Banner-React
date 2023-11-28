@@ -20,7 +20,9 @@ const Contenido = ({ parent }) => {
                         ? (
                             <div className='w-100 position-absolute bottom-0'>
                                 {/* <Card titulo='The Office' introduccion='El iluso jefe Michael intenta encauzar el descontento de sus empleados en la empresa papelera Dunder Mifflin a traves de continuas debilidades y percances.' /> */}
-                                <Carrusel2 />
+                                {/* <Carrusel2 /> */}
+                                <Carrusel />
+
                             </div>
                         )
                         :

@@ -77,18 +77,12 @@ const Carrusel2 = () => {
             elements.push(newImagenes.slice(index * items, (index + 1) * items));
         }
         
-        const obtenerAltoImagen = (evento) => {
-            const altoImagen = evento.target.clientHeight;
-            console.log(altoImagen)
-            return altoImagen;
-        };
 
         const updatedCarouselContent = elements.map((element, index) => {
             return (
                 <div className={`carousel-item ${index === 0 && 'active'}`} key={Math.random() * 100000} >
-                    {/* <p className='text-danger m-2 fs-4' >Favoritos</p> */}
+                    <p className='text-light m-2 fs-4' >Favoritos</p>
                     <div className='cards-wrapper' >
-                        {/* <div className=' cards-wrapper bg-primary' style={{ height: '253px' }}  > */}
                         {
                             element.map((imagen, imagenIndex) => (
                                 <div
@@ -99,7 +93,6 @@ const Carrusel2 = () => {
                                         src={PATH + imagen.path}
                                         className="card-img-top"
                                         alt="..."
-                                        onLoad={ index === 0 ? obtenerAltoImagen : true}
                                     />
                                     <div className={`card-body bg-dark text-light`}>
 
@@ -109,7 +102,7 @@ const Carrusel2 = () => {
                             ))
                         }
                     </div>
-                    <button className="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev" onClick={() => prev(iteraciones)} style={{ height: `${obtenerAltoImagen}%`}}>
+                    <button className="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev" onClick={() => prev(iteraciones)}>
                         <span className="carousel-control-prev-icon" aria-hidden="true"></span>
                         <span className="visually-hidden">Previous</span>
                     </button>
