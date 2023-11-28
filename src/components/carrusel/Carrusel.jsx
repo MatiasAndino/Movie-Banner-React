@@ -66,7 +66,7 @@ const Carrusel = () => {
 
     return (
         <div className="container-fluid">
-            <div style={{ height: '20px' }}></div>
+            <div style={{ height: '30px' }}></div>
             <h2 className='text-light m-2 fs-4 align-text-top'>FAVORITOS</h2>
             <div id="carouselExample" className="carousel slide d-flex justify-content-center">
                 <div className="carousel-inner" style={{ width: '95%', overflow: 'visible' }} >

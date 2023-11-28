@@ -22,24 +22,16 @@
   z-index: 2;
 }
 
-/* CARD */
-/* #card{
-  max-width: 50vw;
-  background-color: transparent !important;
-} */
-
-/* CARRUSEL */
 .carousel-control-prev {
   background-color: #444;
-  width: 4%;
-  margin-left: -2.1%;
-
+  width: calc(2% + 10px);
+  left: -10px;
 }
 
 .carousel-control-next {
   background-color: #444;
-  width: 4%;
-  margin-right: -2.1%;
+  width: calc(2% + 10px);
+  right: -10px;
 }
 /* FIN CARRUSEL  */
 
@@ -53,7 +45,7 @@
 }
 
 .card {
-  margin: 0 3px;
+  margin: 0 4px;
   transition-duration: .2s;
   transition-delay: 1s;
   /* min-height:100%; */
@@ -133,18 +125,33 @@
   }
 } */
 
-@media (min-width: 1024px) {
+
+
+/* @media (max-width: 1920px) {
   .carousel-control-prev {
-    background-color: #444;
-    width: 3.5%;
-    margin-left: -1.5%;
+    background-color: #f00;
+    width: 2.55%;
+    margin-left: -0.51%;
   }  
-  .carousel-control-prev {
-    background-color: #444;
-    width: 3.5%;
-    margin-right: -1.5%;
+  .carousel-control-next {
+    background-color: #f00;
+    width: 2.55%;
+    margin-right: -0.51%;
   }  
 }
+@media (max-width: 1440px) {
+  .carousel-control-prev {
+    background-color: #44f;
+    width: 2.55%;
+    margin-left: -0.7%;
+  }  
+  .carousel-control-next {
+    background-color: #44f;
+    width: 2.55%;
+    margin-right: -0.7%;
+  }  
+} */
+
 
 .gradient{
   height: 30vw;
@@ -157,4 +164,7 @@
 
   /* background: linear-gradient(to bottom, transparent 40%, #212529 90%); */
   
+}
+::-webkit-scrollbar {
+  display: none;
 }
