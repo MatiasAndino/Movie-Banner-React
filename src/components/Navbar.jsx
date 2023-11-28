@@ -5,7 +5,7 @@ const Navbar = () => {
 
         <div className="header position-absolute">
 
-            <nav className="navbar navbar-expand-lg navbar-dark shadow-5-strong text-dark">
+            <nav className="navbar navbar-expand-sm navbar-dark shadow-5-strong text-dark">
                 <div className="container-fluid">
                     <a className="navbar-brand" href="#">Navbar</a>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
