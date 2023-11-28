@@ -145,4 +145,13 @@ css
     width: 3.5%;
     margin-right: -1.5%;
   }  
-} 
+}
+
+.gradient{
+  height: 30vw;
+  width: 100%;
+  
+  /* position:absolute; */
+  background: linear-gradient(to bottom, transparent 40%, #212529 90%);
+  /* background: linear-gradient(to bottom, transparent 0%, #212529 100%); */
+}
