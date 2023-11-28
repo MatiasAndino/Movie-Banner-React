@@ -8,32 +8,18 @@ const Carrusel = () => {
     const archivos = ['00.jpg', '01.jpg', '02.jpg', '03.jpg', '04.jpg', '05.jpg', '06.jpg', '07.jpg', '08.jpg', '09.jpg',
         '10.jpg', '11.jpg', '12.jpg', '13.jpg', '14.jpg', '15.jpg', '16.jpg', '17.jpg', '18.jpg', '19.jpg']
 
-    const screenWidth = useScreenWidth();
+    const { screenWidth, items } = useScreenWidth();
     const { activeIndex, next, prev, reset } = useIndiceCarrusel();
     const [imagenes, setImagenes] = useState(archivos);
 
     const windowOptions = {
-        0: {
-            items: 3,
-            style: {height : '18.116vw'}
-            // style: {height : '18.016vw'}
-        },
-        1: {
-            items: 4,
-            style: {height : '14vw'}
-        },
-        2: {
-            items: 5,
-            style: {height : '11.4vw'}
-        },
-        3: {
-            items: 6,
-            style: {height : '9.7vw'}
-            // style: {height : '9.766vw'}
-        },
+        3: { style: { height: '18.116vw' } },
+        4: { style: { height: '14vw' } },
+        5: { style: { height: '11.4vw' } },
+        6: { style: { height: '9.7vw' } }
     }
 
-    const items = windowOptions[screenWidth.items].items;
+
     const total = imagenes.length;
     const iteraciones = Math.ceil(total / items);
 
@@ -58,9 +44,7 @@ const Carrusel = () => {
             return (
                 <div className={`carousel-item ${index === 0 && 'active'}`} key={Math.random() * 100000}>
 
-                    {/* <div className='cards-wrapper bg-danger align-items-center' style={{ overflow: 'visible', height: ` ${9.766 + resto}vw ` }} > */}
-                    <div className='cards-wrapper align-items-center' style={{ overflow: 'visible', ...windowOptions[screenWidth.items].style }} >
-                    {/* <div className='cards-wrapper bg-danger align-items-center' style={{ overflow: 'visible', height: '12vw' }} > */}
+                    <div className='cards-wrapper align-items-center' style={{ overflow: 'visible', ...windowOptions[items].style }} >
 
                         {
                             element.map(imagen => (
@@ -71,8 +55,7 @@ const Carrusel = () => {
                                         src={PATH + imagen}
                                         alt={imagen}
                                         key={imagen}
-                                        style={{zIndex: '2'}}
-                                        // style={windowOptions[screenWidth.items].style}
+                                        style={{ zIndex: '2' }}
                                     />
                                     <div class="card-body bg-dark text-light">
                                         <p class="card-text">❤❤❤❤❤</p>
@@ -87,7 +70,7 @@ const Carrusel = () => {
 
         setCarouselContent({ items, content: updatedCarouselContent });
         setImagenes(newImagenes);
-    }, [screenWidth.items])
+    }, [screenWidth])
 
 
     return (
