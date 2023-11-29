@@ -13,15 +13,17 @@ import Contenido from './Contenido';
 */
 const Banner = ({ parent = 'MainView' }) => {
     const src = 'src/assets/imagenes/16x9-solid.jpg';
+    console.log(parent)
     return (
         <div className=''>
 
             <div className=''>
-                <BackgroundImage />
+                <BackgroundImage parent={ parent } />
             </div>
 
             <div className="">
-                <Contenido parent="MainView" />
+                <Contenido parent={ parent } />
+                {/* <Contenido parent="MainView" /> */}
             </div>
         </div>
     )

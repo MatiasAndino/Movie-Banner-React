@@ -14,19 +14,21 @@ const MainView = () => {
   return (
     <div className='bg-dark'>
 
-        <Navbar />
-        {/* <Banner2 parent='MainView' /> */}
-        <Banner parent='MainView' />
-
-        <Carrusel />
-        <Carrusel />
-        <Carrusel />
-        <Carrusel />
+      <Navbar />
+      {/* <Banner2 parent='MainView' /> */}
+      <Banner parent='MainView' />
+      <Carrusel />
+      <Carrusel />
+      <Carrusel />
+      <Carrusel />
 
       {/* <Carrusel2 />
       <Carrusel2 />
       <Carrusel2 /> */}
-      <div style={{height:'500px'}}></div>
+      <div className='d-flex align-items-center justify-content-center' style={{ height: '500px' }}>
+        <Modal />
+
+      </div>
 
     </div>
 

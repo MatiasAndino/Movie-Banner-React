@@ -27,7 +27,7 @@ const Contenido = ({ parent }) => {
                         )
                         :
                         <>
-                            MODAL
+                            
                         </>
                 }
             </div>

@@ -39,7 +39,7 @@ const Carrusel = () => {
 
                         {
                             element.map(imagen => (
-
+                                
                                 <div className="card border border-0" key={Math.random() * 100000} >
                                     <img
                                         className='card-img-top'
@@ -47,6 +47,8 @@ const Carrusel = () => {
                                         alt={imagen}
                                         key={imagen}
                                         style={{ zIndex: '2' }}
+                                        data-bs-toggle="modal" 
+                                        data-bs-target="#exampleModal"
                                     />
                                     <div className="card-body bg-dark text-light">
                                         <p className="card-text">❤❤❤❤❤</p>
