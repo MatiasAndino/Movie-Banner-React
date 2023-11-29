@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import useScreenWidth from '../screen/useScreenWidth';
 import useIndiceCarrusel from './indice/useIndiceCarrusel';
+import Card from './card/Card'
+import Modal from '../modal/Modal';
+const PATH = './src/images/'
 
 const Carrusel = () => {
 
-    const PATH = './src/images/'
     const archivos = ['00.jpg', '01.jpg', '02.jpg', '03.jpg', '04.jpg', '05.jpg', '06.jpg', '07.jpg', '08.jpg', '09.jpg',
         '10.jpg', '11.jpg', '12.jpg', '13.jpg', '14.jpg', '15.jpg', '16.jpg', '17.jpg', '18.jpg', '19.jpg']
 
@@ -18,8 +20,27 @@ const Carrusel = () => {
     const [carouselContent, setCarouselContent] = useState({ items, content: [] });
 
 
+
+    // const [showM, set_Show_M] = useState(false);
+    // const [modalData, set_Modal_Data] = useState("");
+
+    // const modalShow = () => {
+    //     set_Show_M(!showM);
+    // };
+    // const closeModal = () => {
+    //     set_Show_M(false);
+    // };
+
+    // function openHandleModal() {
+    //     modalShow();
+    // }
+    
+    
+    
+    
     useEffect(() => {
         reset();
+        // set_Modal_Data(PATH + '00.jpg');
 
         const posicion = carouselContent.items * activeIndex;
 
@@ -40,20 +61,7 @@ const Carrusel = () => {
                         {
                             element.map(imagen => (
                                 
-                                <div className="card border border-0" key={Math.random() * 100000} >
-                                    <img
-                                        className='card-img-top'
-                                        src={PATH + imagen}
-                                        alt={imagen}
-                                        key={imagen}
-                                        style={{ zIndex: '2' }}
-                                        data-bs-toggle="modal" 
-                                        data-bs-target="#exampleModal"
-                                    />
-                                    <div className="card-body bg-dark text-light">
-                                        <p className="card-text">❤❤❤❤❤</p>
-                                    </div>
-                                </div>
+                                <Card imagen={imagen} key={Math.random() * 100000} />
                             ))
                         }
                     </div>
@@ -85,6 +93,9 @@ const Carrusel = () => {
                     <span className="visually-hidden">Next</span>
                 </button>
             </div>
+            {/* <Modal visible={showM}>
+                <Modal.BannerModal parent={'Banner'} src={modalData} />
+            </Modal> */}
         </div>
 
     )

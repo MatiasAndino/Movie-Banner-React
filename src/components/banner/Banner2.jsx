@@ -1,5 +1,4 @@
 import React from 'react'
-import Card from '../card/Card';
 import Carrusel from '../carrusel/Carrusel';
 
 
@@ -21,7 +20,7 @@ const Banner2 = ({ parent = 'MainView' }) => {
                             <div>
                                 <div className="col-12 row align-items-end" style={{ height: '100%' }}>
                                     <div className="col-5">
-                                        <Card titulo='The Office' introduccion='El iluso jefe Michael intenta encauzar el descontento de sus empleados en la empresa papelera Dunder Mifflin a traves de continuas debilidades y percances.' />
+                                        {/* <Card titulo='The Office' introduccion='El iluso jefe Michael intenta encauzar el descontento de sus empleados en la empresa papelera Dunder Mifflin a traves de continuas debilidades y percances.' /> */}
                                     </div>
                                 </div>
                                 <div className="col-12">

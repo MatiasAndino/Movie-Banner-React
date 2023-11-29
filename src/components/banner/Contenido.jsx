@@ -1,7 +1,7 @@
 import React from 'react'
 import Carrusel from '../carrusel/Carrusel'
 import Carrusel2 from '../carrusel/Carrusel2'
-import Card from '../card/Card'
+import Card from '../card/Card__'
 
 const Contenido = ({ parent }) => {
 

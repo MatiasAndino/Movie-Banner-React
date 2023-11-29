@@ -2,7 +2,7 @@ import React from 'react'
 import BtnReproducir from '../buttons/BtnReproducir'
 import BtnMasInformacion from '../buttons/BtnMasInformacion'
 
-const Card = ({ titulo, introduccion }) => {
+const Card__ = ({ titulo, introduccion }) => {
   const fontSizeP = {
     fontSize: '1vw',
   }
@@ -22,4 +22,4 @@ const Card = ({ titulo, introduccion }) => {
   )
 }
 
-export default Card
+export default Card__

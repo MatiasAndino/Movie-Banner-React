@@ -1,6 +1,5 @@
 import React from 'react'
 import Navbar from './Navbar'
-import Card from './card/Card'
 import Carrusel from './carrusel/Carrusel'
 import Carrusel2 from './carrusel/Carrusel2'
 import Banner2 from './banner/Banner2'
@@ -26,7 +25,7 @@ const MainView = () => {
       <Carrusel2 />
       <Carrusel2 /> */}
       <div className='d-flex align-items-center justify-content-center' style={{ height: '500px' }}>
-        <Modal />
+        {/* <Modal /> */}
 
       </div>
 
