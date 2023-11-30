@@ -22,7 +22,7 @@ const Carrusel = () => {
 
 
     // const [showM, set_Show_M] = useState(false);
-    // const [modalData, set_Modal_Data] = useState("");
+    const [modalData, setModalData] = useState("");
 
     // const modalShow = () => {
     //     set_Show_M(!showM);
@@ -61,7 +61,7 @@ const Carrusel = () => {
                         {
                             element.map(imagen => (
                                 
-                                <Card imagen={imagen} key={Math.random() * 100000} />
+                                <Card imagen={imagen} setModalData={setModalData} key={Math.random() * 100000} />
                             ))
                         }
                     </div>
@@ -93,9 +93,10 @@ const Carrusel = () => {
                     <span className="visually-hidden">Next</span>
                 </button>
             </div>
-            {/* <Modal visible={showM}>
-                <Modal.BannerModal parent={'Banner'} src={modalData} />
-            </Modal> */}
+            <Modal>
+                <Modal.BannerModal parent='Banner' src={modalData} />
+                <Modal.Body />
+            </Modal>
         </div>
 
     )

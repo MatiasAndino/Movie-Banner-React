@@ -25,13 +25,14 @@ const BackgroundImage = ({ parent, src = 'https://occ-0-3791-185.1.nflxso.net/dn
 
 
   return (
-    <div className='position-relative'>
+    <div className='position-relative' style={{height: '100%'}}>
     {/* <div className='position-relative' style={{height: '100%'}}> */}
       {/* <img src='src/assets/imagenes/16x9-solid.jpg' className="" alt="..." style={ style }/> */}
       <img src={src} className="rounded" alt="..." style={ style }/>
-      <div className={ `gradient-banner-image gradient-banner-image${ parent === 'Banner' && '-banner' } position-absolute top-50` }></div>
+      <div className={ `gradient-banner-image gradient-banner-image${ parent === 'Banner' && '-modal' } position-absolute bottom-0` }></div>
       {/* <div className='gradient-banner-image position-absolute top-50'></div> */}
     </div>
+      // <div className={ `gradient-banner-image gradient-banner-image${ parent === 'Banner' && '-modal' } position-absolute top-50` }></div>
   )
 }
 

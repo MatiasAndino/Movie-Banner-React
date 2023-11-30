@@ -4,28 +4,18 @@ import Modal from '../../modal/Modal';
 
 const PATH = './src/images/'
 
-const Card = ({ imagen }) => {
+const Card = ({ imagen, setModalData }) => {
 
-    const [showM, set_Show_M] = useState(false);
-    const [modalData, set_Modal_Data] = useState("");
-
-    const modalShow = () => {
-        set_Show_M(!showM);
-    };
-    const closeModal = () => {
-        set_Show_M(false);
-    };
+    // const [modalData, set_Modal_Data] = useState("");
 
     function openHandleModal() {
-        modalShow();
+        console.log(PATH + imagen)
+        setModalData(PATH + imagen);
+        // modalShow();
     }
-    
-    useEffect(() => {
-        set_Modal_Data(PATH + imagen);
-    },[showM]);
 
 
-    const r = Math.floor(Math.random()*100)
+    const r = Math.floor(Math.random() * 100)
 
     return (
         <>
@@ -38,16 +28,16 @@ const Card = ({ imagen }) => {
                     style={{ zIndex: '2' }}
                     onClick={openHandleModal}
                     data-bs-toggle="modal"
-                    data-bs-target={"#exampleModal" + r}
+                    data-bs-target="#exampleModal"
                 />
                 <div className="card-body bg-dark text-light">
                     <p className="card-text">❤❤❤❤❤</p>
                 </div>
             </div>
-            <Modal visible={showM} i={"exampleModal" + r}>
+            {/* <Modal visible={showM} i={"exampleModal" + r}>
                 <Modal.BannerModal parent='Banner' src={modalData} />
                 <Modal.Body />
-            </Modal>
+            </Modal> */}
         </>
     )
 }
