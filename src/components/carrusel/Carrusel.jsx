@@ -18,29 +18,12 @@ const Carrusel = () => {
     const iteraciones = Math.ceil(total / items);
 
     const [carouselContent, setCarouselContent] = useState({ items, content: [] });
-
-
-
-    // const [showM, set_Show_M] = useState(false);
     const [modalData, setModalData] = useState("");
 
-    // const modalShow = () => {
-    //     set_Show_M(!showM);
-    // };
-    // const closeModal = () => {
-    //     set_Show_M(false);
-    // };
-
-    // function openHandleModal() {
-    //     modalShow();
-    // }
-    
-    
     
     
     useEffect(() => {
         reset();
-        // set_Modal_Data(PATH + '00.jpg');
 
         const posicion = carouselContent.items * activeIndex;
 
@@ -55,12 +38,9 @@ const Carrusel = () => {
         const updatedCarouselContent = elements.map((element, index) => {
             return (
                 <div className={`carousel-item ${index === 0 && 'active'}`} key={Math.random() * 100000}>
-
                     <div className='cards-wrapper align-items-center' key={Math.random() * 100000} style={{ overflow: 'visible', ...style }}  >
-
                         {
                             element.map(imagen => (
-                                
                                 <Card imagen={imagen} setModalData={setModalData} key={Math.random() * 100000} />
                             ))
                         }

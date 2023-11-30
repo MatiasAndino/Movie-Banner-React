@@ -175,6 +175,7 @@
   background: rgb(33,37,41);
   /* background: linear-gradient(to top, rgb(5, 73, 140) 15%, rgba(238, 5, 5, 0) 80%); */
   background: linear-gradient(to top, rgba(33,37,41,1) 15%, rgba(0,0,0,0) 80%);
+  /* background: linear-gradient(to top, rgba(33,37,41,1) 15%, rgba(0,0,0,0) 80%); */
 }
 
 

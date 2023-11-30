@@ -6,12 +6,9 @@ const PATH = './src/images/'
 
 const Card = ({ imagen, setModalData }) => {
 
-    // const [modalData, set_Modal_Data] = useState("");
-
     function openHandleModal() {
         console.log(PATH + imagen)
         setModalData(PATH + imagen);
-        // modalShow();
     }
 
 

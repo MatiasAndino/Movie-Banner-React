@@ -3,6 +3,11 @@ import Banner from '../banner/Banner'
 
 
 //EL ANCHO DEL MODAL PODRIA SER EN BASE A LOS MARGENES, TIPO EL ANCHO SIEMPRE SERA DEL 100% E IR MANEJANDO LOS MARGENES
+//CREO QUE EL MODAL SE DEBERIA DECLARAR AL PRINCIPIO Y UTILIZAR UN ESTADO GLOBAL PARA QUE SEA MAS OPTIMO
+
+
+
+
 
 const Modal = ({ children, ...props }) => {
     // const visible = props.visible ? 'modal-backdrop fade show' : 'modal fade';
