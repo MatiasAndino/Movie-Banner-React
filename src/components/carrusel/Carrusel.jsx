@@ -40,8 +40,8 @@ const Carrusel = () => {
                 <div className={`carousel-item ${index === 0 && 'active'}`} key={Math.random() * 100000}>
                     <div className='cards-wrapper align-items-center' key={Math.random() * 100000} style={{ overflow: 'visible', ...style }}  >
                         {
-                            element.map(imagen => (
-                                <Card imagen={imagen} setModalData={setModalData} key={Math.random() * 100000} />
+                            element.map((imagen, i) => (
+                                <Card imagen={imagen} setModalData={setModalData} key={Math.random() * 100000} extra={ i === 0 ? 'primero' : i === items - 1 ? 'ultimo' : '' } />
                             ))
                         }
                     </div>

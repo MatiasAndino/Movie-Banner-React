@@ -4,7 +4,7 @@ import Modal from '../../modal/Modal';
 
 const PATH = './src/images/'
 
-const Card = ({ imagen, setModalData }) => {
+const Card = ({ imagen, setModalData, extra }) => {
 
     function openHandleModal() {
         console.log(PATH + imagen)
@@ -16,7 +16,8 @@ const Card = ({ imagen, setModalData }) => {
 
     return (
         <>
-            <div className="card border border-0" key={Math.random() * 100000} >
+            <div className={`card border border-0 ${extra} `} key={Math.random() * 100000} >
+                {/* <div className="card border border-0" key={Math.random() * 100000} > */}
                 <img
                     className='card-img-top'
                     src={PATH + imagen}
