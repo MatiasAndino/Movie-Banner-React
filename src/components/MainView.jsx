@@ -5,7 +5,6 @@ import Carrusel2 from './carrusel/Carrusel2'
 import Banner2 from './banner/Banner2'
 import Banner from './banner/Banner'
 import Modal from './modal/Modal'
-import Borrar from '../archivoBorrar/borrar'
 // import Card from './card/Card'
 
 
@@ -28,9 +27,6 @@ const MainView = () => {
       <div className='d-flex align-items-center justify-content-center' style={{ height: '500px' }}>
         {/* <Modal /> */}
 
-        <Borrar />
-        <Borrar />
-        <Borrar />
       </div>
     </div>
 
