@@ -29,6 +29,8 @@ const MainView = () => {
         {/* <Modal /> */}
 
         <Borrar />
+        <Borrar />
+        <Borrar />
       </div>
     </div>
 
